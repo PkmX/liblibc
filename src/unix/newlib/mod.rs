@@ -659,6 +659,9 @@ cfg_if! {
     if #[cfg(target_arch = "arm")] {
         mod arm;
         pub use self::arm::*;
+    } else if #[cfg(target_arch = "riscv32")] {
+        mod riscv32;
+        pub use self::riscv32::*;
     } else {
         // Only tested on ARM so far. Other platforms might have different
         // definitions for types and constants.
