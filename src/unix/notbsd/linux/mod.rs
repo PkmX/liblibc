@@ -74,12 +74,14 @@ s! {
         #[cfg(any(target_arch = "mips",
                   target_arch = "arm",
                   target_arch = "powerpc",
+                  target_arch = "riscv32",
                   all(target_arch = "x86_64",
                       target_pointer_width = "32")))]
         __align: [::c_long; 0],
         #[cfg(not(any(target_arch = "mips",
                       target_arch = "arm",
                       target_arch = "powerpc",
+                      target_arch = "riscv32",
                       all(target_arch = "x86_64",
                           target_pointer_width = "32"))))]
         __align: [::c_longlong; 0],
@@ -90,12 +92,14 @@ s! {
         #[cfg(any(target_arch = "mips",
                   target_arch = "arm",
                   target_arch = "powerpc",
+                  target_arch = "riscv32",
                   all(target_arch = "x86_64",
                       target_pointer_width = "32")))]
         __align: [::c_long; 0],
         #[cfg(not(any(target_arch = "mips",
                       target_arch = "arm",
                       target_arch = "powerpc",
+                      target_arch = "riscv32",
                       all(target_arch = "x86_64",
                           target_pointer_width = "32"))))]
         __align: [::c_longlong; 0],
